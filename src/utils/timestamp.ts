@@ -1,0 +1,2 @@
+export const formatMs=(ms:number)=>{const h=Math.floor(ms/3600000),m=Math.floor(ms%3600000/60000),s=Math.floor(ms%60000/1000),x=ms%1000;return `${h?String(h).padStart(2,"0")+":":""}${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}.${String(x).padStart(3,"0")}`};
+export const srtTime=(ms:number)=>formatMs(ms).replace(".",",").padStart(12,"0");
